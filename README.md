@@ -39,3 +39,4 @@
 	- Tell Git to use GPG and the new signing key (globally)
 		- `git config --global commit.gpgsign true`
 		- `git config --global user.signingkey {SIGNING_KEY}`
+1. Make stuff!
