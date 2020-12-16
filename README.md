@@ -2,8 +2,8 @@
 
 1. Install [Fira Code](https://github.com/tonsky/FiraCode) font.
 1. Install [iTerm2](https://iterm2.com/index.html).
-    - *Minimal* theme.
-	- Set font to FiraCode / Light / 16pt / 131 / Use ligatures
+    - **Minimal** theme.
+	- Set font to _FiraCode / Light / 16pt / 131 / Use ligatures_
 	- Remove "last login time" message: `touch .hushlogin`
 1. Install [Oh My ZSH](https://ohmyz.sh).
     - Install [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions).
@@ -25,8 +25,8 @@
 	- Install Laravel Valet: `valet install`
 	- Register the directory: `valet park`
 1. Install [Nova](https://nova.app).
-	- *Neon* theme.
-	- Set font to FiraCode / Light / 15pt / 1.75
+	- **Neon** theme.
+	- Set font to _FiraCode / Light / 15pt / 1.75_
 1. Install [GitHub Desktop](https://desktop.github.com).
 1. Generate SHH key with passphrase
 	- Backup secret key and passphrase
