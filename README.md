@@ -28,7 +28,7 @@
 	- **Neon** theme.
 	- Set font to _FiraCode / Light / 15pt / 1.75_
 1. Install [GitHub Desktop](https://desktop.github.com).
-1. Generate SHH key with passphrase
+1. Generate SHH key with passphrase (using GitHub instructions)
 	- Backup secret key and passphrase
 	- Add the SSH key to the ssh-agent
 	- Add SSH key to GitHub
