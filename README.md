@@ -1,48 +1,30 @@
-# Mac Dev Machine Setup
+# Dev Machine Setup (Mac)
 
-1. Install [Fira Code](https://github.com/tonsky/FiraCode) font.
-1. Install [iTerm2](https://iterm2.com/index.html).
-    - **Minimal** theme.
-	- Set font to _FiraCode / Light / 16pt / 131 / Use ligatures_
-	- Remove "last login time" message: `touch .hushlogin`
-1. Install [Oh My ZSH](https://ohmyz.sh).
-    - Install [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions).
-		- Enable tab-completion suggestions: `echo "ZSH_AUTOSUGGEST_STRATEGY=(history completion)" > ~/.oh-my-zsh/custom/zsh-autosuggestions-config.zsh`
-1. Install [Homebrew](https://brew.sh).
-	- `brew install php`
-	- `brew install mysql`
-	- `brew install git`
-1. Install [Composer](https://getcomposer.org).
-	- Make it available globally: `mv composer.phar /usr/local/bin/composer`
-	- Add the Composer vendor bin directory to `$PATH`: 
-		- `sudo vim /etc/paths`
-		- Add "/Users/{username}/.composer/vendor/bin"
-1. Install the [Laravel](https://laravel.com) Installer globally.
-	- `composer global require laravel/installer`
-1. Install Laravel Valet globally.
-	- `composer global require laravel/valet`
-	- Create a code directory: `mkdir code`
-	- Install Laravel Valet: `valet install`
-	- Register the directory: `valet park`
-1. Install [Nova](https://nova.app).
-	- **Neon** theme.
-	- Set font to _FiraCode / Light / 15pt / 1.75_
-1. Install [GitHub Desktop](https://desktop.github.com).
-1. Generate SHH key with passphrase (using GitHub instructions)
-	- Backup secret key and passphrase
-	- Add the SSH key to the ssh-agent
-	- Add SSH key to GitHub
-1. Install [GPG Suite](https://gpgtools.org) (without GPG Mail)
-	- Create a new key pair (or import)
-	- Backup secret key and passphrase
-	- Add GPG key to GitHub
-	- Tell Git to use GPG and the new signing key (globally)
-		- `git config --global commit.gpgsign true`
-		- `git config --global user.signingkey {SIGNING_KEY}`
-1. Install all Google fonts.
-	- `cd ~/Library/Fonts/`
-	- `git clone https://github.com/google/fonts.git google-fonts`
-	- To update periodically...
-		- `cd ~/Library/Fonts/google-fonts/`
-		- `git pull`		
-1. Make stuff!
+Install the [Fira Code](https://github.com/tonsky/FiraCode) font (includes nice ligatures) for use in all consoles and code editors.
+
+Install [iTerm2](https://iterm2.com/index.html) and use the **Minimal** theme. Set the font to **FiraCode / Light / 16pt** with a **131 line height**. Adjust the cursor (blinking underline) and window size. Remove the "last login time" message in the terminal by creating `touch .hushlogin`.
+
+Install [Oh My ZSH](https://ohmyz.sh) with the [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) plugin. Enable tab-completion suggestions in the plugin with `echo "ZSH_AUTOSUGGEST_STRATEGY=(history completion)" > ~/.oh-my-zsh/custom/zsh-autosuggestions-config.zsh`.
+
+Install [Homebrew](https://brew.sh) for general package management.
+- `brew install php`
+- `brew install mysql`
+- `brew install git`
+	
+Install [Composer](https://getcomposer.org) for PHP dependency management and make it available globally with `mv composer.phar /usr/local/bin/composer` once it's installed. Add the Composer vendor bin directory to `$PATH` using `sudo vim /etc/paths` and then add "/Users/{username}/.composer/vendor/bin" to the file.
+
+Install the [Laravel](https://laravel.com) Installer globally with `composer global require laravel/installer`.
+
+Install Laravel Valet globally with `composer global require laravel/valet`. Create a code directory to house projects in the root directory with `mkdir code`, then do `valet install` and register the directory with `valet park`.
+
+Install the [Nova](https://nova.app) code editor and use the **Neon** theme. Set the font to **FiraCode / Light / 15pt / 1.75**. Sign-in to Panic Sync.
+
+Install [GitHub Desktop](https://desktop.github.com), sign-in to GitHub, and pull projects into the `code` directory.
+
+Generate a new SHH key with a passphrase (using GitHub's instructions). Add the key to the ssh-agent and to GitHub. Don't forget to backup the secret key and passphrase.
+
+Install [GPG Suite](https://gpgtools.org) (without GPG Mail) and create a new key pair (or import on from another computer). If new, add the key to GitHub. Tell Git to use GPG and the new signing key (globally) with `git config --global commit.gpgsign true` and then `git config --global user.signingkey {SIGNING_KEY}`. Don't forget to backup the secret key and passphrase.
+
+Install all Google fonts to `cd ~/Library/Fonts/` with `git clone https://github.com/google/fonts.git google-fonts`. Update periodically with `cd ~/Library/Fonts/google-fonts/` and `git pull`.
+	
+**Now go make stuff!**
