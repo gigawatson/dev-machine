@@ -19,7 +19,7 @@ Install Laravel Valet globally with `composer global require laravel/valet`. Cre
 
 Install the [Nova](https://nova.app) code editor and use the **Neon** theme. Set the font to **FiraCode / Light / 15pt / 1.75**. Sign-in to Panic Sync.
 
-Install [GitHub Desktop](https://desktop.github.com), sign-in to GitHub, and pull projects into the `code` directory.
+Install [GitHub Desktop](https://desktop.github.com), sign-in to GitHub, and clone projects into the `code` directory.
 
 Generate a new SHH key with a passphrase (using GitHub's instructions). Add the key to the ssh-agent and to GitHub. Don't forget to backup the secret key and passphrase.
 
