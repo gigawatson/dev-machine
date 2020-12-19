@@ -13,13 +13,13 @@
 	- `brew install mysql`
 	- `brew install git`
 1. Install [Composer](https://getcomposer.org).
-	- Globally: `mv composer.phar /usr/local/bin/composer`
+	- Make it available globally: `mv composer.phar /usr/local/bin/composer`
 	- Add the Composer vendor bin directory to `$PATH`: 
 		- `sudo vim /etc/paths`
-		- Add `/Users/{username}/.composer/vendor/bin`
-1. Install the [Laravel](https://laravel.com) Installer globally:
+		- Add "/Users/{username}/.composer/vendor/bin"
+1. Install the [Laravel](https://laravel.com) Installer globally.
 	- `composer global require laravel/installer`
-1. Install Laravel Valet globally:
+1. Install Laravel Valet globally.
 	- `composer global require laravel/valet`
 	- Create a code directory: `mkdir code`
 	- Install Laravel Valet: `valet install`
@@ -33,10 +33,16 @@
 	- Add the SSH key to the ssh-agent
 	- Add SSH key to GitHub
 1. Install [GPG Suite](https://gpgtools.org) (without GPG Mail)
-	- Create a new key pair
+	- Create a new key pair (or import)
 	- Backup secret key and passphrase
 	- Add GPG key to GitHub
 	- Tell Git to use GPG and the new signing key (globally)
 		- `git config --global commit.gpgsign true`
 		- `git config --global user.signingkey {SIGNING_KEY}`
+1. Install all Google fonts.
+	- `cd ~/Library/Fonts/`
+	- `git clone https://github.com/google/fonts.git google-fonts`
+	- To update periodically...
+		- `cd ~/Library/Fonts/google-fonts/`
+		- `git pull`		
 1. Make stuff!
