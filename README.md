@@ -14,7 +14,9 @@ Install [Homebrew](https://brew.sh) for general package management.
 
 Install the [Nova](https://nova.app) code editor and use the **Neon** theme. Set the font to **FiraCode / Light / 15pt / 1.75**. Sign-in to Panic Sync.
 
-Add a global `.gitignore` in the root directory with `touch .gitignore_global`. Add the `.nova`. Tell git about the file with `git config --global core.excludesfile ~/.gitignore_global`.
+Add a global `.gitignore` in the root directory with `touch .gitignore_global` and tell git about the file with `git config --global core.excludesfile ~/.gitignore_global`. Add this to `.gitignore_global`:
+
+- `.nova/`
 
 Install [Composer](https://getcomposer.org) for PHP dependency management and make it available globally with `mv composer.phar /usr/local/bin/composer` once it's installed. Add the Composer vendor bin directory to `$PATH` using `sudo vim /etc/paths` and then add "/Users/{username}/.composer/vendor/bin" to the file.
 
