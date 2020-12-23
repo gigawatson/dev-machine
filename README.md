@@ -31,4 +31,5 @@ Install [GitHub Desktop](https://desktop.github.com), sign-in to GitHub, and clo
 Generate a new SHH key with a passphrase (using GitHub's instructions). Add the key to the ssh-agent and to GitHub. Don't forget to backup the secret key and passphrase.
 
 Install [GPG Suite](https://gpgtools.org) (without GPG Mail) and create a new key pair (or import on from another computer). If new, add the key to GitHub. Tell Git to use GPG and the new signing key (globally) with `git config --global commit.gpgsign true` and then `git config --global user.signingkey {SIGNING_KEY}`. Don't forget to backup the secret key and passphrase.
+
 **Now go make stuff!**
