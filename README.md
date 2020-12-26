@@ -11,6 +11,8 @@ Install [Homebrew](https://brew.sh) for general package management.
 -   `brew install php`
 -   `brew install mysql`
 -   `brew install git`
+-   `brew install node`
+-   `brew install wp-cli`
 
 Install the [Nova](https://nova.app) code editor and use the **Neon** theme. Set the font to **FiraCode / Light / 15pt / 1.75**. Sign-in to Panic Sync.
 
@@ -24,8 +26,6 @@ Install [Composer](https://getcomposer.org) for PHP dependency management and ma
 Install the [Laravel](https://laravel.com) Installer globally with `composer global require laravel/installer`.
 
 Install Laravel Valet globally with `composer global require laravel/valet`. Create a code directory to house projects in the root directory with `mkdir code`, then do `valet install` and register the directory with `valet park`.
-
-Install [Node.js and npm](https://nodejs.org/en/). Then install the [n module](https://www.npmjs.com/package/n) (for managing versions) with `sudo npm install n -g`.
 
 Install [GitHub Desktop](https://desktop.github.com), sign-in to GitHub, and clone projects into the `code` directory.
 
