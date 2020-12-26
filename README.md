@@ -6,7 +6,7 @@ Install [iTerm2](https://iterm2.com/index.html) and use the **Minimal** theme. S
 
 Install [Oh My ZSH](https://ohmyz.sh) with the [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) plugin. Enable tab-completion suggestions in the plugin with `echo "ZSH_AUTOSUGGEST_STRATEGY=(history completion)" > ~/.oh-my-zsh/custom/zsh-autosuggestions-config.zsh`.
 
-Install [Homebrew](https://brew.sh) for general package management.
+Install [Homebrew](https://brew.sh) for general package management with the following packages.
 
 -   `brew install php`
 -   `brew install mysql`
