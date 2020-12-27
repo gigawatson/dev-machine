@@ -17,7 +17,7 @@ Install [Nova](https://nova.app) with the following settings:
 
 ## Terminal
 
-Install [iTerm2](https://iterm2.com/index.html) with the following settings:
+Install [iTerm2](https://iterm2.com/index.html) for a better Shell experience with the following settings:
 
 -   **Minimal** theme.
 -   Font set to **FiraCode / Light / 16pt / 131 line height**.
@@ -29,7 +29,7 @@ Remove the "last login time" message in the terminal window by creating a `.hush
 touch .hushlogin
 ```
 
-Install [Oh My ZSH](https://ohmyz.sh) with the [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) plugin. To enable tab-completion suggestions in the plugin, create a new settings file with it turned on:
+Install [Oh My ZSH](https://ohmyz.sh) to move from Bash to to a more interactive Zsh. Also install the [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) plugin and to enable tab-completion suggestions, create a new settings file with it turned on:
 
 ```zsh
 echo "ZSH_AUTOSUGGEST_STRATEGY=(history completion)" > ~/.oh-my-zsh/custom/zsh-autosuggestions-config.zsh
@@ -64,14 +64,17 @@ Then append `/Users/{username}/.composer/vendor/bin` to the file.
 
 ## Laravel (and Valet)
 
-Install the [Laravel Installer](https://laravel.com) globally as well as Laravel Valet with:
+Install the [Laravel Installer](https://laravel.com) globally for PHP projects as well as Laravel Valet for a fast and minimal dev environment using Nginx and DnsMasq:
 
 ```zsh
+# Install Laravel Installer
 composer global require laravel/installer
+
+# Install Laravel Valet
 composer global require laravel/valet
 ```
 
-Create a **project code directory** to house projects in the root directory (`~/code`) and register it with Valet so everything automatically gets its own .test URL.
+Create a **project code directory** to house projects in the root directory (`~/code`) and register it with Valet so top directories automatically get their own `*.test` domain.
 
 ```zsh
 mkdir code && cd code
@@ -105,16 +108,16 @@ touch .gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 ```
 
-Add these to `.gitignore_global`:
+Add these files and directories to the `.gitignore_global`:
 
 -   `.nova/`
 -   `.DS_Store`
 
 ### SSH (and GPG)
 
-For authenticating, generate a new SHH key with a blank passphrase (using [GitHub's instructions](https://github.com/settings/keys)). Add the key to both the ssh-agent and to GitHub. Don't forget to back up the secret key.
+For authentication, generate a new SHH key with a blank passphrase (using [GitHub's instructions](https://github.com/settings/keys)). Add the key to both the ssh-agent and to GitHub. Don't forget to back up the secret key.
 
-For signing, install [GPG Suite](https://gpgtools.org) (without GPG Mail) and create a new key pair (or import one from another computer). If new, add the key to GitHub. Don't forget to backup the secret key and passphrase.
+For commit signing, install [GPG Suite](https://gpgtools.org) (without GPG Mail) and create a new key pair (or import one from another computer). If new, add the key to GitHub. Don't forget to backup the secret key and passphrase.
 
 Tell Git to use GPG and the new signing key (globally) with:
 
@@ -146,11 +149,17 @@ PHP
 # Create the database
 wp db create
 
+# Use HTTPS
+valet secure wp
+
 # Install WP (adjust details)
-wp core install --url=wp.test --title="WP Dev Playground" --admin_user=user --admin_password=pass --admin_email=user@email.com --skip-email
+wp core install --url=https://wp.test --title="WP Dev Playground" --admin_user=user --admin_password=pass --admin_email=user@email.com --skip-email
 
 # Delete the sample posts
 wp post delete 1 2 --force
+
+# Install and activate dev plugins
+wp plugin install query-monitor user-switching --activate
 ```
 
 **Now go make stuff!**
