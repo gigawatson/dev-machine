@@ -1,5 +1,7 @@
 # Dev Machine Setup (Mac)
 
+This is more or less in order if setting up a new dev machine.
+
 ## Fonts
 
 [Fira Code](https://github.com/tonsky/FiraCode) is a nice monospace font with programming ligatures for use in all consoles and code editors.
@@ -78,7 +80,10 @@ valet park
 
 ## phpMyAdmin
 
-Configure phpMyAdmin by opening `/usr/local/etc/phpmyadmin.config.inc.php` and setting `$cfg['Servers'][$i]['AllowNoPassword']` to `true`. Add a 32 char `$cfg['blowfish_secret']` as well.
+Configure phpMyAdmin by opening `/usr/local/etc/phpmyadmin.config.inc.php` and adjusting the following settings:
+
+-   Set `$cfg['Servers'][$i]['AllowNoPassword']` to `true`.
+-   Add a 32 char `$cfg['blowfish_secret']`.
 
 Link **phpMyAdmin** with Valet (for https://pma.test):
 
