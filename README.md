@@ -155,8 +155,14 @@ valet secure wp
 # Install WP (adjust details)
 wp core install --url=https://wp.test --title="WP Dev Playground" --admin_user=user --admin_password=pass --admin_email=user@email.com --skip-email
 
+# Set permalinks
+wp rewrite structure '/%postname%/' --category-base=topics
+
 # Delete the sample posts
 wp post delete 1 2 --force
+
+# Delete the default plugins
+wp plugin delete hello akismet
 
 # Install and activate dev plugins
 wp plugin install query-monitor user-switching --activate
