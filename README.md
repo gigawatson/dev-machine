@@ -128,12 +128,28 @@ git config --global user.signingkey {SIGNING_KEY}
 Install a dev installation of WordPress using Laravel Valet and wp-cli:
 
 ```zsh
+# Create the new directory
 cd code && mkdir wp && cd wp
-wp core download --skip-content
+
+# Download the latest WP version
+wp core download
+
+# Start the SQL server
 mysql.server start
-wp config create --dbname=wptest --dbuser=root
+
+# Create a WP config file with debug constants set
+wp config create --dbname=wptest --dbuser=root --extra-php <<PHP
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_LOG', true );
+PHP
+
+# Create the database
 wp db create
-wp core install --url=wp.test --title="WP Dev" --admin_user=user --admin_password=pass --admin_email=user@email.com --skip-email
+
+# Install WP (adjust details)
+wp core install --url=wp.test --title="WP Dev Playground" --admin_user=user --admin_password=pass --admin_email=user@email.com --skip-email
+
+# Delete the sample posts
 wp post delete 1 2 --force
 ```
 
