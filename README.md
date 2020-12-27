@@ -1,6 +1,6 @@
 # Dev Machine Setup (Mac)
 
-This is more or less in order if setting up a new dev machine.
+This is more or less in order if setting up a new dev machine. If not, prerequisites should be obvious.
 
 ## Fonts
 
@@ -13,6 +13,7 @@ Install [Nova](https://nova.app) with the following settings:
 -   **Neon** theme.
 -   Font set to **FiraCode / Light / 15pt / 1.75**.
 -   Sign-in to Panic Sync.
+-   **Extensions**: Emmet, Prettier
 
 ## Terminal
 
