@@ -168,4 +168,8 @@ wp plugin delete hello akismet
 wp plugin install query-monitor user-switching --activate
 ```
 
+## Bundlers
+
+Stop wasting your life away and just download [CodeKit](https://codekitapp.com/).
+
 **Now go make stuff!**
