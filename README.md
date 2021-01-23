@@ -178,4 +178,6 @@ Maybe stop living in the past with WordPress and upgrade to something [rad](http
 
 → [`webpack.mix.js`](https://gist.github.com/gigawatson/99aa9308ff57d677a3f68c01902677bd)
 
+---
+
 **Now go make stuff!**
