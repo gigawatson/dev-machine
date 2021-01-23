@@ -176,6 +176,6 @@ wp plugin install query-monitor user-switching --activate
 
 Maybe stop living in the past with WordPress and upgrade to something [rad](https://statamic.com/). Here's a nice starter config for `webpack.mix.js` so it works nicely with [Browsersync](https://browsersync.io/) and a secured (https) site with Laravel Valet.
 
-→ [Code](https://gist.github.com/gigawatson/99aa9308ff57d677a3f68c01902677bd)
+→ [`webpack.mix.js`](https://gist.github.com/gigawatson/99aa9308ff57d677a3f68c01902677bd)
 
 **Now go make stuff!**
