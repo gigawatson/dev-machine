@@ -178,7 +178,7 @@ Maybe stop living in the past with WordPress and upgrade to something [rad](http
 
 ```js
 const mix = require('laravel-mix');
-const domain = ''; // add your local .test domain
+const domain = __dirname.split('/').pop() + '.test';
 const homedir = require('os').homedir();
 
 mix.js('resources/js/site.js', 'public/js');
