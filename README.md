@@ -176,48 +176,6 @@ wp plugin install query-monitor user-switching --activate
 
 Maybe stop living in the past with WordPress and upgrade to something [rad](https://statamic.com/). Here's a nice starter config for `webpack.mix.js` so it works nicely with [Browsersync](https://browsersync.io/) and a secured (https) site with Laravel Valet.
 
-```js
-const mix = require('laravel-mix');
-const domain = __dirname.split('/').pop() + '.test';
-const homedir = require('os').homedir();
-
-mix.js('resources/js/site.js', 'public/js');
-
-mix.postCss('resources/css/tailwind.css', 'public/css', [
-    require('postcss-import'),
-    require('tailwindcss'),
-    require('postcss-nested'),
-    require('postcss-preset-env')({ stage: 0 }),
-]);
-
-mix.browserSync({
-    files: [
-        './resources/**/*.antlers.html',
-        './resources/**/*.blade.php',
-        './content/**/*.md',
-    ],
-    proxy: 'https://' + domain,
-    host: domain,
-    open: 'external',
-    https: {
-        key: homedir + '/.config/valet/Certificates/' + domain + '.key',
-        cert: homedir + '/.config/valet/Certificates/' + domain + '.crt',
-    },
-    notify: {
-        styles: {
-            margin: '0',
-            padding: '8px 20px',
-            fontSize: '12px',
-            borderRadius: '0 0 0 5px',
-            color: 'white',
-            backgroundColor: 'rgba(0,0,0,.5)',
-        },
-    },
-});
-
-if (mix.inProduction()) {
-    mix.version();
-}
-```
+<script src="https://gist.github.com/gigawatson/99aa9308ff57d677a3f68c01902677bd.js"></script>
 
 **Now go make stuff!**
