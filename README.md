@@ -192,11 +192,9 @@ mix.postCss('resources/css/tailwind.css', 'public/css', [
 
 mix.browserSync({
     files: [
-        'app/**/*',
-        'public/**/*',
-        'resources/views/**/*',
-        'resources/lang/**/*',
-        'routes/**/*',
+        './resources/**/*.antlers.html',
+        './resources/**/*.blade.php',
+        './content/**/*.md',
     ],
     proxy: 'https://' + domain,
     host: domain,
@@ -207,7 +205,7 @@ mix.browserSync({
     },
     notify: {
         styles: {
-            margin: '0px',
+            margin: '0',
             padding: '8px 20px',
             fontSize: '12px',
             borderRadius: '0 0 0 5px',
