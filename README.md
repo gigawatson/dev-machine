@@ -126,6 +126,10 @@ git config --global commit.gpgsign true
 git config --global user.signingkey {SIGNING_KEY}
 ```
 
+## Bundlers
+
+[Webpack](https://webpack.js.org/) is nice if you're using Statamic and [Laravel Mix](https://laravel-mix.com/). Otherwise, stop wasting your life away and just download [CodeKit](https://codekitapp.com/).
+
 ## WordPress
 
 Install a dev installation of WordPress using Laravel Valet and wp-cli:
@@ -168,8 +172,54 @@ wp plugin delete hello akismet
 wp plugin install query-monitor user-switching --activate
 ```
 
-## Bundlers
+## Statamic
 
-Stop wasting your life away and just download [CodeKit](https://codekitapp.com/).
+Maybe stop living in the past with WordPress and upgrade to something [rad](https://statamic.com/). Here's a nice starter config for `webpack.mix.js` so it works nicely with [Browsersync](https://browsersync.io/) and a secured (https) site with Laravel Valet.
+
+```js
+const mix = require('laravel-mix');
+const domain = ''; // add your local .test domain
+const homedir = require('os').homedir();
+
+mix.js('resources/js/site.js', 'public/js');
+
+mix.postCss('resources/css/tailwind.css', 'public/css', [
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('postcss-nested'),
+    require('postcss-preset-env')({ stage: 0 }),
+]);
+
+mix.browserSync({
+    files: [
+        'app/**/*',
+        'public/**/*',
+        'resources/views/**/*',
+        'resources/lang/**/*',
+        'routes/**/*',
+    ],
+    proxy: 'https://' + domain,
+    host: domain,
+    open: 'external',
+    https: {
+        key: homedir + '/.config/valet/Certificates/' + domain + '.key',
+        cert: homedir + '/.config/valet/Certificates/' + domain + '.crt',
+    },
+    notify: {
+        styles: {
+            margin: '0px',
+            padding: '8px 20px',
+            fontSize: '12px',
+            borderRadius: '0 0 0 5px',
+            color: 'white',
+            backgroundColor: 'rgba(0,0,0,.5)',
+        },
+    },
+});
+
+if (mix.inProduction()) {
+    mix.version();
+}
+```
 
 **Now go make stuff!**
