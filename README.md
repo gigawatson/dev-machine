@@ -176,12 +176,15 @@ wp plugin install query-monitor user-switching --activate
 
 Maybe stop living in the past with WordPress and upgrade to something [rad](https://statamic.com/).
 
-Install the [Statamic CLI](https://statamic.dev/installation) globally:
+Install the [Statamic CLI](https://statamic.dev/installation) globally.
 
 ```zsh
-# Install Statamic CLI
 composer global require statamic/cli
+```
 
+Then create a Statamic site.
+
+```zsh
 # Create a new Statamic site
 cd code
 statamic new {site_name}
