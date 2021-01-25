@@ -176,7 +176,7 @@ wp plugin install query-monitor user-switching --activate
 
 Maybe stop living in the past with WordPress and upgrade to something [rad](https://statamic.com/).
 
-Install the [Statamic CLI](https://statamic.dev/installation) globally for:
+Install the [Statamic CLI](https://statamic.dev/installation) globally:
 
 ```zsh
 # Install Statamic CLI
@@ -185,6 +185,9 @@ composer global require statamic/cli
 # Create a new Statamic site
 cd code
 statamic new {site_name}
+
+# Create the first user
+php please make:user
 ```
 
 Here's a nice Laravel Mix (webpack) starter config so it works nicely with [Browsersync](https://browsersync.io/) and a secured (https) `.test` site with Laravel Valet.
