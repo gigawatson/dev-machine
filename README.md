@@ -29,13 +29,7 @@ Remove the "last login time" message in the terminal window by creating a `.hush
 touch .hushlogin
 ```
 
-Install [Oh My ZSH](https://ohmyz.sh) to move from Bash to to a more interactive Zsh. Also install the [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) plugin and to enable tab-completion suggestions, create a new settings file with it turned on:
-
-```zsh
-echo "ZSH_AUTOSUGGEST_STRATEGY=(history completion)" > ~/.oh-my-zsh/custom/zsh-autosuggestions-config.zsh
-```
-
-Open up `~/.zshrc` and enable the following plugins: `plugins=(git zsh-autosuggestions wp-cli)`
+Install [Oh My ZSH](https://ohmyz.sh) to move from Bash to a more interactive Zsh.
 
 ## Package Management (Homebrew, Composer, npm)
 
