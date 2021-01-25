@@ -188,6 +188,9 @@ statamic new {site_name}
 
 # Create the first user
 php please make:user
+
+# Use HTTPS
+valet secure
 ```
 
 Here's a nice Laravel Mix (webpack) starter config so it works nicely with [Browsersync](https://browsersync.io/) and a secured (https) `.test` site with Laravel Valet.
