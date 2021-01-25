@@ -128,7 +128,7 @@ git config --global user.signingkey {SIGNING_KEY}
 
 ## Bundlers
 
-[Webpack](https://webpack.js.org/) is nice if you're using Statamic and [Laravel Mix](https://laravel-mix.com/). Otherwise, stop wasting your life away and just download [CodeKit](https://codekitapp.com/).
+[Webpack](https://webpack.js.org/) is nice if you're using [Laravel Mix](https://laravel-mix.com/). Otherwise, stop wasting your life away and just download [CodeKit](https://codekitapp.com/).
 
 ## WordPress
 
