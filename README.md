@@ -194,6 +194,12 @@ Here's a nice Laravel Mix (webpack) starter config so it works nicely with [Brow
 
 → [`webpack.mix.js`](https://gist.github.com/gigawatson/99aa9308ff57d677a3f68c01902677bd)
 
+## Simple PHP Site
+
+Here's a simple PHP site that works with Laravel Valet, Laravel Mix, and Tailwind CSS.
+
+→ [1-simple-php-site.md](https://gist.github.com/gigawatson/f7a55520400e898e21a03f250e1cbae2)
+
 ---
 
 **Now go make stuff!**
