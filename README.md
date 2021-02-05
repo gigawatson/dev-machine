@@ -43,10 +43,9 @@ Install [Oh My ZSH](https://ohmyz.sh) to move from Bash to a more interactive Zs
 
 Install [Homebrew](https://brew.sh) for general system package management with the following packages:
 
--   `brew install php`
--   `brew install mysql`
--   `brew install git`
--   `brew install node`
+```zsh
+brew install php mysql git node
+```
 
 Install [Composer](https://getcomposer.org) for PHP dependency management. Once installed, make it available globally with:
 
