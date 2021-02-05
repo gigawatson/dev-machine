@@ -8,20 +8,28 @@ This is more or less in order if setting up a new dev machine. If not, prerequis
 
 ## Code Editor
 
-Install [Nova](https://nova.app) with the following settings:
+Install [VS Code](https://code.visualstudio.com/) with the following settings:
 
--   **Neon** theme.
--   Font set to **FiraCode / Light / 15pt / 1.75**.
--   Sign-in to Panic Sync.
--   **Extensions**: Emmet, Prettier
+→ [`settings.json`](https://github.com/gigawatson/dev-machine/blob/main/vscode-settings.json)
+
+### Extensions
+
+- One Dark Pro theme
+- Material Icon theme
+- PHP Intelephense
+- Alpine.js IntelliSense
+- Tailwind CSS IntelliSense
+- DotENV
+- ESLint
 
 ## Terminal
 
 Install [iTerm2](https://iterm2.com/index.html) for a better Shell experience with the following settings:
 
--   **Minimal** theme.
--   Font set to **FiraCode / Light / 16pt / 131 line height**.
--   Adjust the cursor (to blinking underline) and window size (varies).
+- **Minimal** theme.
+- **Dark Background** color preset.
+- Font set to **FiraCode / Light / 16pt / 146 line height**.
+- `` ⌃` `` Hotkey.
 
 Remove the "last login time" message in the terminal window by creating a `.hushlogin` file in the root directory.
 
@@ -37,10 +45,8 @@ Install [Homebrew](https://brew.sh) for general system package management with t
 
 -   `brew install php`
 -   `brew install mysql`
--   `brew install phpmyadmin`
 -   `brew install git`
 -   `brew install node`
--   `brew install wp-cli`
 
 Install [Composer](https://getcomposer.org) for PHP dependency management. Once installed, make it available globally with:
 
@@ -68,22 +74,32 @@ composer global require laravel/installer
 composer global require laravel/valet
 ```
 
-Create a **project code directory** to house projects in the root directory (`~/code`) and register it with Valet so top directories automatically get their own `*.test` domain.
+Create a **project code directory** (`~/code/sites`) and register it with Valet so top directories automatically get their own `*.test` domain.
 
 ```zsh
-mkdir code && cd code
+mkdir -p code/sites && cd code/sites
 valet install
 valet park
 ```
 
-## phpMyAdmin
+## Database Management
+
+Use [TablePlus](https://tableplus.com/).
+
+### phpMyAdmin (optional)
+
+Install phpMyAdmin via Homebrew.
+
+```zsh
+brew install phpmyadmin
+```
 
 Configure phpMyAdmin by opening `/usr/local/etc/phpmyadmin.config.inc.php` and adjusting the following settings:
 
 -   Set `$cfg['Servers'][$i]['AllowNoPassword']` to `true`.
 -   Add a 32 char `$cfg['blowfish_secret']`.
 
-Link **phpMyAdmin** with Valet (for https://pma.test):
+Link phpMyAdmin with Valet (for https://pma.test):
 
 ```zsh
 cd /usr/local/share/phpmyadmin
@@ -93,7 +109,7 @@ valet secure pma
 
 ## Git (and GitHub)
 
-Install [GitHub Desktop](https://desktop.github.com), sign-in to GitHub, and clone projects into the `~/code` directory.
+Install [GitHub Desktop](https://desktop.github.com), sign-in to GitHub, and clone projects into the `~/code` directory or the `~/code/sites` directory (for things you want automatially set up as a `.test` Laravel Valet site).
 
 Add a global `.gitignore` in the root directory and tell git about the file:
 
@@ -104,8 +120,10 @@ git config --global core.excludesfile ~/.gitignore_global
 
 Add these files and directories to the `.gitignore_global`:
 
--   `.nova/`
--   `.DS_Store`
+- `.DS_Store`
+- `.vscode`
+- `*.log`
+- `*.sql`
 
 ### SSH (and GPG)
 
@@ -122,13 +140,18 @@ git config --global user.signingkey {SIGNING_KEY}
 
 ## Bundlers
 
-[Webpack](https://webpack.js.org/) is nice if you're using [Laravel Mix](https://laravel-mix.com/). Otherwise, stop wasting your life away and just download [CodeKit](https://codekitapp.com/).
+[Webpack](https://webpack.js.org/) is nice if you're using [Laravel Mix](https://laravel-mix.com/). Otherwise, you should probably stop wasting your life away and just download [CodeKit](https://codekitapp.com/).
 
-## WordPress
+## CMS
+
+### WordPress
 
 Install a dev installation of WordPress using Laravel Valet and wp-cli:
 
 ```zsh
+# Install wp-cli
+brew install wp-cli
+
 # Create the new directory
 cd code && mkdir wp && cd wp
 
@@ -166,7 +189,7 @@ wp plugin delete hello akismet
 wp plugin install query-monitor user-switching --activate
 ```
 
-## Statamic
+### Statamic
 
 Maybe stop living in the past with WordPress and upgrade to something [rad](https://statamic.com/).
 
@@ -194,9 +217,9 @@ Here's a nice Laravel Mix (webpack) starter config so it works nicely with [Brow
 
 → [`webpack.mix.js`](https://gist.github.com/gigawatson/99aa9308ff57d677a3f68c01902677bd)
 
-## Simple PHP Site
+## Simple PHP Site Setup
 
-Here's a simple PHP site that works with Laravel Valet, Laravel Mix, and Tailwind CSS.
+A simple PHP site that uses Laravel Valet, Laravel Mix, AlpineJS, and Tailwind CSS.
 
 → [`1-simple-php-site.md`](https://gist.github.com/gigawatson/f7a55520400e898e21a03f250e1cbae2)
 
