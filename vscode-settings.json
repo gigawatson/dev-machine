@@ -5,15 +5,17 @@
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.detectIndentation": false,
   "editor.insertSpaces": true,
-  "editor.formatOnPaste": true,
   "editor.minimap.enabled": false,
   "editor.tabCompletion": "on",
   "editor.tabSize": 4,
   "[json]": {
-    "editor.tabSize": 2,
+      "editor.tabSize": 2,
   },
   "[javascript]": {
-    "editor.tabSize": 2,
+      "editor.tabSize": 2,
+  },
+  "emmet.includeLanguages": {
+      "blade": "html",
   },
   "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
@@ -21,10 +23,16 @@
   "workbench.sideBar.location": "right",
   "explorer.openEditors.visible": 0,
   "files.autoSave": "onWindowChange",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "material-icon-theme.saturation": 0.5,
   "material-icon-theme.activeIconPack": "vue",
   "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.colorDecorators": "off",
   "emmet.triggerExpansionOnTab": true,
   "blade.format.enable": true,
+  "files.exclude": {
+      "**/.git": false
+  },
 }
